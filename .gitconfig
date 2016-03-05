@@ -1,0 +1,17 @@
+[user]
+	name = Felipe Martins
+	email = 
+[alias]
+	pr = pull --rebase
+	co = checkout
+	cm = commit
+	s = status -s
+	lg = log --oneline --decorate --all --graph
+[push]
+	deafult = matching
+[core]
+	autocrlf = input
+[pull]
+	rebase = true
+[rerere]
+	enabled = true
