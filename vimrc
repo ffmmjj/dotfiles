@@ -21,7 +21,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
 
 "" All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -34,6 +33,9 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set pastetoggle=<F2>
+set clipboard=unnamed
+:imap jk <Esc>
+
 
 "" CODING
 set showmatch   " highlights matching characters [{()}]
@@ -48,9 +50,6 @@ au BufNewFile,BufReadPost *.python setl
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-"" YouCompleteMe settings
-let g:ycm_server_python_interpreter = expand('~/.pyenv/shims/python')
-let g:ycm_autoclose_preview_window_after_completion=1
 
 "" vim-airline settings
 set ttimeoutlen=50
