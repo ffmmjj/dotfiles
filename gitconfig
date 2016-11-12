@@ -2,8 +2,8 @@
 	pr = pull --rebase
 	co = checkout
 	cm = commit
-	st = status -s
-	lg = log --oneline --decorate --all --graph
+	st = status -sb
+	lg = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 [push]
 	default = matching
 [core]
@@ -12,4 +12,6 @@
 	rebase = true
 [rerere]
 	enabled = true
+[core]
+  excludesfile =  ~/.gitignore_global
 
