@@ -9,18 +9,18 @@ call vundle#begin()
 ""call vundle#begin('~/some/path/here')
 "
 "" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 "
 "" Add all your plugins here (note older versions of Vundle used Bundle
 "  instead of Plugin)
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+"" Search using Ack
+Plugin 'mileszs/ack.vim'
+Plugin 'w0rp/ale'
 
 "" All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -28,9 +28,9 @@ filetype plugin indent on    " required
 
 "" BASICS
 syntax on
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set pastetoggle=<F2>
 set clipboard=unnamed
