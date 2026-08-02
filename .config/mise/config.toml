@@ -1,0 +1,30 @@
+[settings]
+experimental = true
+
+[tools]
+"aqua:abiosoft/colima" = "latest"
+"aqua:docker/cli" = "latest"
+"aqua:lima-vm/lima" = "latest"
+java = "graalvm-community-24.0.2"
+jq = "latest"
+node = "lts"
+python = "3"
+"asdf:mise-plugins/mise-vim" = "latest"
+"asdf:mise-plugins/asdf-glow" = "latest"
+"aqua:astral-sh/uv" = "latest"
+"asdf:mise-plugins/mise-gcloud" = "latest"
+"aqua:docker/compose" = "latest"
+
+[dotfiles]
+"/Users/felipe/.gitconfig" = { mode = "symlink" }
+"/Users/felipe/.zshrc" = { mode = "symlink" }
+"~/.vimrc" = {}
+"~/.config/mise/config.toml" = {}
+
+[bootstrap.hooks]
+post-packages = """
+mkdir -p ~/.docker/cli-plugins && \
+ln -sf "$(mise where aqua:docker/compose)/docker-cli-plugin-docker-compose" \
+  ~/.docker/cli-plugins/docker-compose
+"""
+
